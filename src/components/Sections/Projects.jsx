@@ -44,6 +44,10 @@ export default function Landlords() {
               <BenefitItem>✔ Bathroom fitting</BenefitItem>
               <BenefitItem>✔ Waste/Furntiure removal</BenefitItem>
               <BenefitItem>✔ Handyman repair</BenefitItem>
+              <BenefitItem>✔ Roof repair</BenefitItem>
+              <BenefitItem>✔ Fence repair</BenefitItem>
+              <BenefitItem>✔ Electrical </BenefitItem>
+              <BenefitItem>✔ Plumbing </BenefitItem>
             </BenefitsList>
           </ContentSection>
 

@@ -1,99 +1,148 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-import ClientSlider from "../Elements/ClientSlider";
-import ServiceBox from "../Elements/ServiceBox";
 import FullButton from "../Buttons/FullButton";
 
-// Assets
-import AddImage1 from "../../assets/img/add/1.png";
-import AddImage2 from "../../assets/img/add/2.png";
-import AddImage3 from "../../assets/img/add/3.png";
-import AddImage4 from "../../assets/img/add/4.png";
-
 //icons
-import LocalShippingIcon from '@mui/icons-material/LocalShipping';
-import CleaningServicesOutlinedIcon from '@mui/icons-material/CleaningServicesOutlined';
-import ConstructionIcon from '@mui/icons-material/Construction';
-import FormatPaintOutlinedIcon from '@mui/icons-material/FormatPaintOutlined';
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import CleaningServicesOutlinedIcon from "@mui/icons-material/CleaningServicesOutlined";
+import ConstructionIcon from "@mui/icons-material/Construction";
+import FormatPaintOutlinedIcon from "@mui/icons-material/FormatPaintOutlined";
+import HouseOutlinedIcon from "@mui/icons-material/HouseOutlined";
+import CameraOutdoorIcon from "@mui/icons-material/CameraOutdoor";
+import LightIcon from "@mui/icons-material/Light";
+import RoofingIcon from "@mui/icons-material/Roofing";
+import PlumbingIcon from "@mui/icons-material/Plumbing";
 
 export default function Services() {
   return (
     <Wrapper id="services">
-      
       <div className="whiteBg" style={{ padding: "60px 0" }}>
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">Our Awesome Services</h1>
             <p className="font13">
-            Explore our top-notch property maintenance services in Liverpool for residential 
-            and commercial properties, ensuring your spaces stay in prime condition with our expert solutions.
+              Explore our top-notch property maintenance services for
+              residential and commercial properties, ensuring your spaces stay
+              in prime condition with our expert solutions.
             </p>
           </HeaderInfo>
           <ServiceBoxRow className="flex">
             <ServiceBoxWrapper>
-              <VanIcon>
-              <LocalShippingIcon
-              sx={{
-                width: 100,
-                height:100,
-                
-              }}
-              />  
-              </VanIcon>
-             <h4>House Clearance <br/> & Removals</h4>
+              <HouseIcon>
+                <HouseOutlinedIcon
+                  sx={{
+                    width: 100,
+                    height: 100,
+                  }}
+                />
+              </HouseIcon>
+
+              <h4>
+                Find a Tenant Services <br />
+                Sell your home/Land
+              </h4>
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
-              <CleaningIcon
-              
-              >
-              <CleaningServicesOutlinedIcon
-              sx={{
-                width: 100,
-                height: 100,
-              }}
-              
-              />
-                </CleaningIcon>
-                <h4>End of tenancy <br/> & Deep cleaning</h4>
+              <VanIcon>
+                <LocalShippingIcon
+                  sx={{
+                    width: 100,
+                    height: 100,
+                  }}
+                />
+              </VanIcon>
+              <h4>
+                House Clearance <br /> & Removals
+              </h4>
+            </ServiceBoxWrapper>
+            <ServiceBoxWrapper>
+              <CameraOutdoorIcon
+                sx={{
+                  width: 100,
+                  height: 100,
+                }}
+              ></CameraOutdoorIcon>
+              <h4>CCTV Installation</h4>
+            </ServiceBoxWrapper>
+            <ServiceBoxWrapper>
+              <CleaningIcon>
+                <CleaningServicesOutlinedIcon
+                  sx={{
+                    width: 100,
+                    height: 100,
+                  }}
+                />
+              </CleaningIcon>
+              <h4>
+                End of tenancy <br /> & Deep cleaning
+              </h4>
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <HandyManIcon>
                 <ConstructionIcon
-                sx={{
-                  width:100,
-                  height:100,
-                }}
+                  sx={{
+                    width: 100,
+                    height: 100,
+                  }}
                 />
               </HandyManIcon>
               <h4>Handy man repairs</h4>
             </ServiceBoxWrapper>
-            
+
             <ServiceBoxWrapper>
               <PaintIcon>
                 <FormatPaintOutlinedIcon
-                sx={{
-                  width:100,
-                  height:100,
-                }}
+                  sx={{
+                    width: 100,
+                    height: 100,
+                  }}
                 />
               </PaintIcon>
-              <h4>Painting <br/> & re-decorating</h4>
+              <h4>
+                Painting <br /> & re-decorating
+              </h4>
             </ServiceBoxWrapper>
-            
-          
+            <ServiceBoxWrapper>
+              <PaintIcon>
+                <PlumbingIcon
+                  sx={{
+                    width: 100,
+                    height: 100,
+                  }}
+                />
+              </PaintIcon>
+              <h4>Plumbing</h4>
+            </ServiceBoxWrapper>
+            <ServiceBoxWrapper>
+              <LightIcon
+                sx={{
+                  width: 100,
+                  height: 100,
+                }}
+              ></LightIcon>
+              <h4>Electrician</h4>
+            </ServiceBoxWrapper>
+            <ServiceBoxWrapper>
+              <RoofingIcon
+                sx={{
+                  width: 100,
+                  height: 100,
+                }}
+              ></RoofingIcon>
+              <h4>Roofing Repairs</h4>
+            </ServiceBoxWrapper>
           </ServiceBoxRow>
-         <h4>We offer a wide range of other services - get in contact today to see how we can help</h4>
-         <BtnWrapper>
-            
+          <h4>
+            We offer a wide range of other services - get in contact today to
+            see how we can help
+          </h4>
+          <BtnWrapper>
             <a href="#contactForm">
-            <FullButton title="Contact us" 
-            
-            />
+              <FullButton title="Contact us" />
             </a>
           </BtnWrapper>
         </div>
-        
       </div>
     </Wrapper>
   );
@@ -110,31 +159,32 @@ const BtnWrapper = styled.div`
   }
 `;
 const ServiceBoxRow = styled.div`
-  @media (max-width: 860px) {
-    flex-direction: column;
+  display: grid;
+  grid-template-columns: auto;
+
+  @media (min-width: 760px) {
+    grid-template-columns: auto auto auto;
+    gap: 0px;
   }
 `;
 
+const HouseIcon = styled.div`
+  color: black;
+`;
 const VanIcon = styled.div`
-color:black;
-
-`
+  color: black;
+`;
 const CleaningIcon = styled.div`
-color: black;
-
-`
+  color: black;
+`;
 
 const HandyManIcon = styled.div`
-color:black;
-
-`
+  color: black;
+`;
 
 const PaintIcon = styled.div`
-color:black;
-
-`
-
-
+  color: black;
+`;
 
 const ServiceBoxWrapper = styled.div`
   width: 20%;
