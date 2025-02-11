@@ -6,42 +6,32 @@ import FullButton from "../Buttons/FullButton";
 
 // Assets
 import AddImage1 from "../../assets/img/trustpilot.jpg";
-import AddImage2 from "../../assets/img/trustpilotnum.png";
+import AddImage2 from "../../assets/img/reviews.png";
 import AddImage3 from "../../assets/img/review.PNG";
-
-
 
 export default function Reviews() {
   return (
     <Wrapper id="reviews">
-      
       <div className="whiteBg" style={{ padding: "60px 0" }}>
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">Testimonials</h1>
-            
           </HeaderInfo>
           <TrustpilotWrapper>
             <a href="https://www.trustpilot.com/review/swiftukproperties.co.uk">
-            <img src={AddImage2}  />
+              <img src={AddImage2} />
             </a>
-            </TrustpilotWrapper>
+          </TrustpilotWrapper>
           <ServiceBoxRow>
-          <ReviewsWrapper>
+            <ReviewsWrapper>
               <img src={AddImage1} width={500} />
             </ReviewsWrapper>
-           {/* single review */}
+            {/* single review */}
             <ReviewWrapper>
-            <img src={AddImage3}  />
-             
+              <img src={AddImage3} />
             </ReviewWrapper>
-           
-         
-          
           </ServiceBoxRow>
-        
         </div>
-        
       </div>
     </Wrapper>
   );
@@ -50,7 +40,6 @@ export default function Reviews() {
 const Wrapper = styled.section`
   width: 100%;
 `;
-
 
 const ServiceBoxRow = styled.div`
             display: grid;
@@ -70,38 +59,32 @@ const ServiceBoxRow = styled.div`
 `;
 
 const TrustpilotWrapper = styled.div`
-img{
-width:auto;
-} 
+  img {
+    width: auto;
+  }
 
-@media (max-width: 768px) {
-img{width:100%;}            
-
-            
-            
-        }
 `;
 const ReviewWrapper = styled.div`
-img{
-width:500px;
-}
+  img {
+    width: 500px;
+  }
 
-@media (max-width: 768px) {
-             img{width:100%;} 
-            
-            
-        }
+  @media (max-width: 768px) {
+    img {
+      width: 100%;
+    }
+  }
 `;
 const ReviewsWrapper = styled.div`
-img{
-width:500px;
-} 
+  img {
+    width: 500px;
+  }
 
-@media (max-width: 768px) {
-           img{width:100%;} 
-            
-            
-        }
+  @media (max-width: 768px) {
+    img {
+      width: 100%;
+    }
+  }
 `;
 const HeaderInfo = styled.div`
   @media (max-width: 860px) {
