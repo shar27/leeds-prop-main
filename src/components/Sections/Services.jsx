@@ -159,7 +159,7 @@ const BtnWrapper = styled.div`
   }
 `;
 const ServiceBoxRow = styled.div`
-  display: grid;
+  display: grid !important;
   grid-template-columns: auto;
 
   @media (min-width: 760px) {
