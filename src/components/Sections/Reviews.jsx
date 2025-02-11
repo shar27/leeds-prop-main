@@ -13,7 +13,7 @@ import AddImage3 from "../../assets/img/review.PNG";
 
 export default function Reviews() {
   return (
-    <Wrapper id="services">
+    <Wrapper id="reviews">
       
       <div className="whiteBg" style={{ padding: "60px 0" }}>
         <div className="container">
