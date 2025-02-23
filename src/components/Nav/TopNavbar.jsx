@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link as RouterLink } from "react-router-dom"; // Import RouterLink
 // Components
-import Sidebar from "../Nav/Sidebar";
+import Sidebar from "./Sidebar";
 import Backdrop from "../Elements/Backdrop";
 // Assets
 import LogoIcon from "../../assets/svg/Logo";
@@ -23,24 +23,36 @@ export default function TopNavbar() {
   return (
     <>
       <ContactInfoSmallScreen>
-        <a href="mailto:hello@liverpoolpropertymaintenance.com">📧 hello@liverpoolpropertymaintenance.com</a>
+        <a href="mailto:hello@liverpoolpropertymaintenance.com">
+          📧 hello@liverpoolpropertymaintenance.com
+        </a>
         <a href="tel:03333606113">📞 0333 360 6113</a>
       </ContactInfoSmallScreen>
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
-      <Wrapper className="flexCenter animate whiteBg" style={y > 100 ? { height: "60px" } : { height: "100px" }}>
+      <Wrapper
+        className="flexCenter animate whiteBg"
+        style={y > 100 ? { height: "60px" } : { height: "100px" }}
+      >
         <NavInner className="container flexSpaceCenter">
-          <RouterLink className="pointer flexNullCenter" to="/"onClick={() => {
-        setTimeout(() => {
-          const section = document.getElementById("/");
-          if (section) {
-            section.scrollIntoView({ behavior: "smooth" });
-          }
-        }, 0);
-      }}>
+          <RouterLink
+            className="pointer flexNullCenter"
+            to="/"
+            onClick={() => {
+              setTimeout(() => {
+                const section = document.getElementById("/");
+                if (section) {
+                  section.scrollIntoView({ behavior: "smooth" });
+                }
+              }, 0);
+            }}
+          >
             <LogoIcon />
           </RouterLink>
-          <BurderWrapper className="pointer" onClick={() => toggleSidebar(!sidebarOpen)}>
+          <BurderWrapper
+            className="pointer"
+            onClick={() => toggleSidebar(!sidebarOpen)}
+          >
             <BurgerIcon />
           </BurderWrapper>
           <UlWrapper className="flexNullCenter">
@@ -116,7 +128,13 @@ export default function TopNavbar() {
           </UlWrapper>
           <UlWrapperRight className="flexNullCenter">
             <li className="semiBold font15 pointer">
-              <a href="mailto:hello@liverpoolpropertymaintenance.com" style={{ padding: "10px 30px 10px 0" }}>📧 hello@liverpoolpropertymaintenance.com</a> <br/>
+              <a
+                href="mailto:hello@liverpoolpropertymaintenance.com"
+                style={{ padding: "10px 30px 10px 0" }}
+              >
+                📧 hello@liverpoolpropertymaintenance.com
+              </a>
+              <br />
               <a href="/" style={{ padding: "10px 30px 10px 0" }}>
                 Call today 📞 0333 360 6113
               </a>
@@ -147,6 +165,8 @@ const ContactInfoSmallScreen = styled.div`
     width: 100%;
     display: block;
     z-index: 999;
+    font-size:14px;
+      text-align: start;
   }
 `;
 
@@ -184,6 +204,7 @@ const BurderWrapper = styled.button`
 
   @media (max-width: 760px) {
     display: block;
+    margin-right:40px;
   }
 `;
 
