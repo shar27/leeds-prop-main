@@ -196,7 +196,7 @@ const QuoteWrapper = styled.div`
   
   @media (max-width: 960px) {
     left: 50%;
-    display:none;
+    display:none !important;
     bottom: auto;
     top: 40%;
     transform: translateX(-50%);
