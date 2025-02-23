@@ -212,12 +212,12 @@ const UlWrapper = styled.ul`
   display: flex;
 
   @media (max-width: 760px) {
-    display: none;
+    display: none !important;
   }
 `;
 
 const UlWrapperRight = styled.ul`
   @media (max-width: 760px) {
-    display: none;
+    display: none !important;
   }
 `;
