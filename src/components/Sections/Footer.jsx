@@ -58,6 +58,9 @@ justify-content: space-between;
 color:black;
 font-weight:semi-bold;
 padding: 1.5rem;
+@media (max-width: 550px) {
+    font-size: 9px;
+  }
 `
 const InnerWrapper = styled.div`
   @media (max-width: 550px) {

@@ -91,7 +91,7 @@ const FloatWrapper = styled.div`
   z-index: 1000;
   @media (max-width: 460px) {
     bottom: 40px;
-  right: 60px;
+  right: 0px;
   }
 `;
 
