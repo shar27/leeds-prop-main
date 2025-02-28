@@ -17,6 +17,25 @@
 
   gtag('config', 'G-EF7JQ6NXRK');
 </script> 
+<!-- Event snippet for Click to call conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-11182108205/R7cjCMncm6MaEK3chdQp',
+        'value': 1.0,
+        'currency': 'GBP',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+  
 <!-- Event snippet for Website lead conversion page -->
 <script>
   gtag('event', 'conversion', {'send_to': 'AW-11182108205/8i3RCJ-EtK4YEK3chdQp'});
