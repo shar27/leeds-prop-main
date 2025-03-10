@@ -12,6 +12,7 @@ import Footer from "../components/Sections/Footer";
 import Locations from "../components/Sections/Locations";
 import Badges from "../components/Sections/Badges";
 import WhatsApp from '../assets/img/whatsapp-business-icon.jpeg';
+import WhatsappIcon from '../components/Elements/WhatsappIcon'
 // import OtherAreas from "../components/Sections/OtherAreas";
 
 export default function Landing() {
@@ -40,9 +41,9 @@ export default function Landing() {
       <TopNavbar />
       <Header />
       <FloatWrapper>
-        <a href="https://wa.me/447907772626">
-          <Img src={WhatsApp} alt="WhatsApp" />
-        </a>
+     
+         <WhatsappIcon/>
+     
         {showArrow && (
           <ArrowButton onClick={scrollToTop}>
             <svg
@@ -89,7 +90,7 @@ const FloatWrapper = styled.div`
   align-items: center;
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 0px;
   z-index: 1000;
   @media (max-width: 460px) {
     bottom: 40px;
