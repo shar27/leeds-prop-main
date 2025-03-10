@@ -30,7 +30,7 @@ export default function Header() {
           
           <BtnWrapper>
             <a href="#contactForm">
-            <FullButton title="Free Quote"  />
+            <FullButton title="Get a Free Quote today!"  />
             </a>
           </BtnWrapper>
         </div>
