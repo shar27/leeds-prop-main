@@ -45,7 +45,7 @@ export default function Contact() {
       <div className="lightBg">
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Get a quote</h1>
+            <h1 className="font40 extraBold">Get a Free Quote</h1>
           </HeaderInfo>
           <div className="row" style={{ paddingBottom: "30px" }}>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -92,7 +92,7 @@ export default function Contact() {
                 />
               
                 <SubmitWrapper className="flex">
-                  <ButtonInput type="submit" value="Send" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
+                  <ButtonInput type="submit" value="Submit" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
                 </SubmitWrapper>
               </Form>
             </div>
