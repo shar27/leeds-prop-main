@@ -17,11 +17,16 @@ export default function Reviews() {
           <HeaderInfo>
             <h1 className="font40 extraBold">Testimonials</h1>
           </HeaderInfo>
-          <TrustpilotWrapper>
+          <TrustpilotWrapperSmall>
             <a href="https://www.trustpilot.com/review/swiftukproperties.co.uk">
-              <img src={AddImage2} />
+<img src="https://res.cloudinary.com/daaahgwfy/image/upload/c_thumb,w_200,g_face/v1741603982/license/tp_mxh4to.png" alt="" srcset="" />
             </a>
-          </TrustpilotWrapper>
+          </TrustpilotWrapperSmall>
+          <TrustpilotWrapperLarge>
+            <a href="https://www.trustpilot.com/review/swiftukproperties.co.uk">
+<img src="https://res.cloudinary.com/daaahgwfy/image/upload/v1741603982/license/tp_mxh4to.png" alt="" srcset="" />
+            </a>
+          </TrustpilotWrapperLarge>
           <ServiceBoxRow>
             <ReviewsWrapper>
               <img src={AddImage1} width={500} />
@@ -58,11 +63,25 @@ const ServiceBoxRow = styled.div`
         }
 `;
 
-const TrustpilotWrapper = styled.div`
-  img {
+const TrustpilotWrapperSmall = styled.div`
+  
+display:none;
+img {
     width: auto;
   }
+@media (max-width:1024px){
+display:block;
+}
+`;
 
+const TrustpilotWrapperLarge = styled.div`
+display:block;
+img {
+    width: auto;
+  }
+@media (max-width:1024px){
+display:none;
+}
 `;
 const ReviewWrapper = styled.div`
   img {

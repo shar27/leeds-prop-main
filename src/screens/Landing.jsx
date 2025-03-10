@@ -10,6 +10,7 @@ import Reviews from "../components/Sections/Reviews";
 import Contact from "../components/Sections/Contact";
 import Footer from "../components/Sections/Footer";
 import Locations from "../components/Sections/Locations";
+import Badges from "../components/Sections/Badges";
 import WhatsApp from '../assets/img/whatsapp-business-icon.jpeg';
 // import OtherAreas from "../components/Sections/OtherAreas";
 
@@ -62,6 +63,7 @@ export default function Landing() {
         )}
       </FloatWrapper>
       <Reviews />
+      <Badges/>
       <Services />
       <Projects/>
       {/* <Locations/> */}
