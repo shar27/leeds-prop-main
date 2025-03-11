@@ -6,6 +6,7 @@ import FullButton from "../Buttons/FullButton";
 import HeaderImage from "../../assets/img/header-img.jpg";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
+import MiniForm from '../Sections/MiniForm'
 
 export default function Header() {
   return (
@@ -17,7 +18,7 @@ export default function Header() {
         <HeadingTag>
             Property maintenance specialists covering Liverpool, Manchester  & surrounding areas.
           </HeadingTag>
-          <h1 className="extraBold font60">Liverpool Property Maintenance.</h1>
+          <h2 className="extraBold font40">Liverpool Property Maintenance.</h2>
           
           
           <HeaderP className="font13 semiBold">
@@ -38,16 +39,10 @@ export default function Header() {
       <RightSide>
         <ImageWrapper>
           <Img className="radius8" src={HeaderImage} width="100%" alt="office" style={{zIndex: 9}} />
-          <QuoteWrapper className="flexCenter darkBg radius8">
-            <QuotesWrapper>
-              <QuotesIcon />
-            </QuotesWrapper>
-            <div>
-              <p className="font15 whiteColor">
-                <em>Making the difficult choices, easier.</em>
-              </p>            
-              </div>
-          </QuoteWrapper>
+         <MiniFormWrapperSmall>
+          <MiniForm />
+          </MiniFormWrapperSmall>
+      
           <DotsWrapper>
             <Dots />
           </DotsWrapper>
@@ -57,6 +52,38 @@ export default function Header() {
     </Wrapper>
   );
 }
+
+const MiniFormWrapperSmall = styled.div `
+
+@media (max-width:1024px){
+display:none;
+
+}
+`
+
+const ContactWrapper = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+
+  @media (max-width: 960px) {
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+  }
+`;
 
 
 const Wrapper = styled.section`
@@ -98,7 +125,7 @@ const HeaderP = styled.div`
   padding: 15px 0 50px 0;
   line-height: 1.5rem;
   @media (max-width: 960px) {
-    padding: 15px 0 50px 0;
+    padding: 15px 10px 50px 0;
     text-align: center;
     max-width: 100%;
   }
@@ -176,6 +203,8 @@ const ImageWrapper = styled.div`
   z-index: 9;
   @media (max-width: 960px) {
     width: 100%;
+      filter: brightness(0.5); /* Darkens image by reducing brightness */
+
     justify-content: center;
   }
 `;

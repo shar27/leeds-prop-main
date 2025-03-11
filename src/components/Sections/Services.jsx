@@ -20,8 +20,8 @@ export default function Services() {
       <div className="whiteBg" style={{ padding: "60px 0" }}>
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Our Awesome Services</h1>
-            <p className="font13">
+            <h1 style={{textAlign: 'center'}} className="font40 extraBold">Our Awesome Services</h1>
+            <p className="">
               Explore our top-notch property maintenance services for
               residential and commercial properties, ensuring your spaces stay
               in prime condition with our expert solutions.
@@ -133,10 +133,10 @@ export default function Services() {
               <h4>Roofing Repairs</h4>
             </ServiceBoxWrapper>
           </ServiceBoxRow>
-          <h4>
+          <HeaderInfo>
             We offer a wide range of other services - get in contact today to
             see how we can help
-          </h4>
+          </HeaderInfo>
           <BtnWrapper>
             <a href="#contactForm">
               <FullButton title="Contact us" />
@@ -159,14 +159,15 @@ const BtnWrapper = styled.div`
   }
 `;
 const ServiceBoxRow = styled.div`
-  display: grid !important;
-  grid-template-columns: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; /* Add spacing between boxes */
 
-  @media (min-width: 760px) {
-    grid-template-columns: auto auto auto;
-    gap: 0px;
+  @media (max-width: 760px) {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
   }
 `;
+
 
 const HouseIcon = styled.div`
   color: black;
@@ -187,9 +188,9 @@ const PaintIcon = styled.div`
 `;
 
 const ServiceBoxWrapper = styled.div`
-  width: 20%;
-  margin-right: 5%;
-  padding: 80px 0;
+  width: 100%;
+  margin-right: 0;
+  padding: 40px 20px;
   @media (max-width: 860px) {
     width: 100%;
     text-align: center;
@@ -199,92 +200,7 @@ const ServiceBoxWrapper = styled.div`
 const HeaderInfo = styled.div`
   @media (max-width: 860px) {
     text-align: center;
+    padding: 0 10px 10px 0px;
   }
 `;
 
-const ButtonsRow = styled.div`
-  @media (max-width: 860px) {
-    justify-content: space-between;
-  }
-`;
-const AddLeft = styled.div`
-  width: 50%;
-  p {
-    max-width: 475px;
-  }
-  @media (max-width: 860px) {
-    width: 80%;
-    order: 2;
-    text-align: center;
-    h2 {
-      line-height: 3rem;
-      margin: 15px 0;
-    }
-    p {
-      margin: 0 auto;
-    }
-  }
-`;
-const AddRight = styled.div`
-  width: 50%;
-  position: absolute;
-  top: -70px;
-  right: 0;
-  @media (max-width: 860px) {
-    width: 80%;
-    position: relative;
-    order: 1;
-    top: -40px;
-  }
-`;
-const AddRightInner = styled.div`
-  width: 100%;
-`;
-const AddImgWrapp1 = styled.div`
-  width: 48%;
-  margin: 0 6% 10px 6%;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-  }
-`;
-const AddImgWrapp2 = styled.div`
-  width: 30%;
-  margin: 0 5% 10px 5%;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-  }
-`;
-const AddImgWrapp3 = styled.div`
-  width: 20%;
-  margin-left: 40%;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-  }
-`;
-const AddImgWrapp4 = styled.div`
-  width: 30%;
-  margin: 0 5%auto;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-  }
-`;

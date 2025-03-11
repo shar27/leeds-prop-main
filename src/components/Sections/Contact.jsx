@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import styled from "styled-components";
 import ReCAPTCHA from 'react-google-recaptcha';
 import ThankYou from '../../screens/ThankYou'
+import WhatsappIcon from '../Elements/WhatsappIcon';
 
 export default function Contact() {
   const [message, setMessage] = useState('');
@@ -48,7 +49,7 @@ export default function Contact() {
             <h1 className="font40 extraBold">Get a Free Quote</h1>
           </HeaderInfo>
           <div className="row" style={{ paddingBottom: "30px" }}>
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-10">
               {message}
               <Form onSubmit={sendEmail} ref={form} id="contactForm">
                 <label className="font13">First name:</label>
@@ -96,6 +97,7 @@ export default function Contact() {
                 </SubmitWrapper>
               </Form>
             </div>
+         
           </div>
         </div>
       </div>

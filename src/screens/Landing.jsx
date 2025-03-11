@@ -63,8 +63,9 @@ export default function Landing() {
           </ArrowButton>
         )}
       </FloatWrapper>
-      <Reviews />
+     
       <Badges/>
+      <Reviews />
       <Services />
       <Projects/>
       {/* <Locations/> */}

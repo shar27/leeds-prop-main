@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-
+import TestimonialBox from "../Elements/TestimonialBox";
 import FullButton from "../Buttons/FullButton";
 
 // Assets
 import AddImage1 from "../../assets/img/trustpilot.jpg";
 import AddImage2 from "../../assets/img/reviews.png";
 import AddImage3 from "../../assets/img/review.PNG";
+import TestimonialSlider from "../Elements/TestimonialSlider";
 
 export default function Reviews() {
   return (
@@ -19,12 +20,20 @@ export default function Reviews() {
           </HeaderInfo>
           <TrustpilotWrapperSmall>
             <a href="https://www.trustpilot.com/review/swiftukproperties.co.uk">
-<img src="https://res.cloudinary.com/daaahgwfy/image/upload/c_thumb,w_200,g_face/v1741603982/license/tp_mxh4to.png" alt="" srcset="" />
+              <img
+                src="https://res.cloudinary.com/daaahgwfy/image/upload/c_thumb,w_200,g_face/v1741603982/license/tp_mxh4to.png"
+                alt=""
+                srcset=""
+              />
             </a>
           </TrustpilotWrapperSmall>
           <TrustpilotWrapperLarge>
             <a href="https://www.trustpilot.com/review/swiftukproperties.co.uk">
-<img src="https://res.cloudinary.com/daaahgwfy/image/upload/v1741603982/license/tp_mxh4to.png" alt="" srcset="" />
+              <img
+                src="https://res.cloudinary.com/daaahgwfy/image/upload/v1741603982/license/tp_mxh4to.png"
+                alt=""
+                srcset=""
+              />
             </a>
           </TrustpilotWrapperLarge>
           <ServiceBoxRow>
@@ -36,6 +45,17 @@ export default function Reviews() {
               <img src={AddImage3} />
             </ReviewWrapper>
           </ServiceBoxRow>
+          <GoogleWrapper>
+            <img src="https://res.cloudinary.com/daaahgwfy/image/upload/c_thumb,w_200,g_face/v1741706709/rgtjdpp1iocrtlfudrfk.jpg" />
+          </GoogleWrapper>
+          <div>
+            <HeaderInfo>
+              <h1 className="font40 extraBold">
+                Our trusted reviews speak for themselves
+              </h1>
+            </HeaderInfo>
+            <TestimonialSlider />
+          </div>
         </div>
       </div>
     </Wrapper>
@@ -44,6 +64,15 @@ export default function Reviews() {
 
 const Wrapper = styled.section`
   width: 100%;
+`;
+
+const HeaderInfo = styled.div`
+  text-align: center;
+  margin-bottom: 20px;
+
+  h1 {
+    font-size: 24px;
+  }
 `;
 
 const ServiceBoxRow = styled.div`
@@ -63,25 +92,33 @@ const ServiceBoxRow = styled.div`
         }
 `;
 
+
+
+const GoogleWrapper = styled.div`
+            display: flex;
+            justify-content:center;
+
+        
+`;
+
 const TrustpilotWrapperSmall = styled.div`
-  
-display:none;
-img {
+  display: none;
+  img {
     width: auto;
   }
-@media (max-width:1024px){
-display:block;
-}
+  @media (max-width: 1024px) {
+    display: block;
+  }
 `;
 
 const TrustpilotWrapperLarge = styled.div`
-display:block;
-img {
+  display: block;
+  img {
     width: auto;
   }
-@media (max-width:1024px){
-display:none;
-}
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 const ReviewWrapper = styled.div`
   img {
@@ -103,97 +140,5 @@ const ReviewsWrapper = styled.div`
     img {
       width: 100%;
     }
-  }
-`;
-const HeaderInfo = styled.div`
-  @media (max-width: 860px) {
-    text-align: center;
-  }
-`;
-
-const ButtonsRow = styled.div`
-  @media (max-width: 860px) {
-    justify-content: space-between;
-  }
-`;
-const AddLeft = styled.div`
-  width: 50%;
-  p {
-    max-width: 475px;
-  }
-  @media (max-width: 860px) {
-    width: 80%;
-    order: 2;
-    text-align: center;
-    h2 {
-      line-height: 3rem;
-      margin: 15px 0;
-    }
-    p {
-      margin: 0 auto;
-    }
-  }
-`;
-const AddRight = styled.div`
-  width: 50%;
-  position: absolute;
-  top: -70px;
-  right: 0;
-  @media (max-width: 860px) {
-    width: 80%;
-    position: relative;
-    order: 1;
-    top: -40px;
-  }
-`;
-const AddRightInner = styled.div`
-  width: 100%;
-`;
-const AddImgWrapp1 = styled.div`
-  width: 48%;
-  margin: 0 6% 10px 6%;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-  }
-`;
-const AddImgWrapp2 = styled.div`
-  width: 30%;
-  margin: 0 5% 10px 5%;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-  }
-`;
-const AddImgWrapp3 = styled.div`
-  width: 20%;
-  margin-left: 40%;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-  }
-`;
-const AddImgWrapp4 = styled.div`
-  width: 30%;
-  margin: 0 5%auto;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
   }
 `;
