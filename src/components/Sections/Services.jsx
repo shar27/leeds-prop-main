@@ -169,14 +169,25 @@ const ServiceBoxRow = styled.div`
     gap: 20px;
     padding-bottom: 10px;
 
-    scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
 
+    /* Scrollbar styling */
     &::-webkit-scrollbar {
-      display: none;
+      height: 8px;
     }
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
   }
 `;
 
@@ -194,6 +205,7 @@ const ServiceBoxWrapper = styled.div`
     padding: 20px 10px;
   }
 `;
+
 
 
 
