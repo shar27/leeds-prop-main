@@ -160,12 +160,15 @@ const BtnWrapper = styled.div`
 `;
 const ServiceBoxRow = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px; /* Add spacing between boxes */
 
   @media (max-width: 760px) {
     grid-template-columns: 1fr; /* Single column on smaller screens */
   }
+    @media (max-width: 500px) {
+  grid-template-columns: 1fr;
+}
 `;
 
 
