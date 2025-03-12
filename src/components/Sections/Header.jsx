@@ -18,20 +18,17 @@ export default function Header() {
         <HeadingTag>
             Property maintenance specialists covering Liverpool, Manchester  & surrounding areas.
           </HeadingTag>
-          <h2 className="extraBold font40">Liverpool Property Maintenance.</h2>
+          <h2 className="extraBold font40">Liverpool Property Maintenance</h2>
           
           
           <HeaderP className="font13 semiBold">
-          Looking for reliable property maintenance services in Liverpool, Manchester & surrouding areas
-          Our experienced team offers comprehensive solutions for residential and commercial properties, 
-          including building maintenance, repairs, and management. Trust us for efficient and affordable services tailored to landlords and property owners. 
-          Contact us for emergency assistance and ensure your property's upkeep with our expert solutions.
+          Trusted by Landlords, Agents & Homeowners. Call Now for a Free Quote!
           </HeaderP>
 
           
           <BtnWrapper>
             <a href="#contactForm">
-            <FullButton title="Get a Free Quote today!"  />
+            <FullButton title="Request Your Free Quote"  />
             </a>
           </BtnWrapper>
         </div>

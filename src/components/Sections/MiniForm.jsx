@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import styled from "styled-components";
 import ReCAPTCHA from 'react-google-recaptcha';
+import { Padding } from '@mui/icons-material';
 
 export default function MiniForm() {
   const [message, setMessage] = useState('');
@@ -41,12 +42,12 @@ export default function MiniForm() {
     <OverlayWrapper id="contact">
       <InnerFormWrapper>
         <HeaderInfo>
-          <h1 className="font30 extraBold">Get a Free Quote</h1>
+          <h1 className="font30 extraBold">Get a Free Quote Today!</h1>
         </HeaderInfo>
 
         {message && <Message>{message}</Message>}
 
-        <Form onSubmit={sendEmail} ref={form} id="contactForm">
+        <Form onSubmit={sendEmail} ref={form} id="miniForm">
 
           <input
             required
@@ -96,9 +97,10 @@ export default function MiniForm() {
           />
 
           <SubmitWrapper>
-            <ButtonInput type="submit" >Submit</ButtonInput>
+            <ButtonInput type="submit" >Request Your Free Quote</ButtonInput>
+           
           </SubmitWrapper>
-
+          <p style={{textAlign: 'center', Padding: '2px'}}>✅ “We’ll call you back within 15 minutes!”</p>
         </Form>
       </InnerFormWrapper>
     </OverlayWrapper>
@@ -107,7 +109,7 @@ export default function MiniForm() {
 
 const OverlayWrapper = styled.div`
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
@@ -182,8 +184,10 @@ const Form = styled.form`
 `;
 
 const ButtonInput = styled.button`
-  background-color: #7620ff;  /* Solid purple button background */
-  color: white !important;               /* White text */
+background:#FF3D00;
+  color: white !important; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+              /* White text */
   border: none;              /* Remove border */
   padding: 18px 20px;        /* A bit more padding for better appearance */
   border-radius: 6px;
@@ -196,7 +200,8 @@ const ButtonInput = styled.button`
   /* border: 1px solid #580cd2; */
 
   &:hover {
-    background-color: #580cd2; /* Darker purple on hover */
+    background-color: #FF3D00;
+     transform: scale(1.05);
   }
 
   &:disabled {

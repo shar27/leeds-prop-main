@@ -42,7 +42,7 @@ export default function Contact() {
   };
 
   return (
-    <Wrapper id="contact">
+    <Wrapper id="contactlg">
       <div className="lightBg">
         <div className="container">
           <HeaderInfo>
@@ -139,17 +139,18 @@ const Form = styled.form`
 `;
 const ButtonInput = styled.input`
   border: 1px solid #7620ff;
-  background-color: #7620ff !important;
+  background-color: #FF3D00 !important;
   width: 100%;
+  border-radius:6px;
   height: 50px !important;
-  padding: 15px !important;
+   padding: 18px 20px; 
   outline: none;
   color: #fff;
-  :hover {
-    background-color: #580cd2 !important;
-    border: 1px solid #7620ff;
-    color: #fff;
+  &:hover {
+    background-color: #FF3D00;
+     transform: scale(1.05);
   }
+
   @media (max-width: 991px) {
     margin: 0 auto;
   }
