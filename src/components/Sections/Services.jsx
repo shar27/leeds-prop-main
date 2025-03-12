@@ -160,16 +160,41 @@ const BtnWrapper = styled.div`
 `;
 const ServiceBoxRow = styled.div`
   display: grid;
-grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px; /* Add spacing between boxes */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 
   @media (max-width: 760px) {
-    grid-template-columns: 1fr; /* Single column on smaller screens */
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 10px;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
-    @media (max-width: 500px) {
-  grid-template-columns: 1fr;
-}
 `;
+
+const ServiceBoxWrapper = styled.div`
+  width: 100%;
+  margin-right: 0;
+  padding: 40px 20px;
+
+  @media (max-width: 760px) {
+    flex: 0 0 auto;
+    width: 250px;
+    
+    scroll-snap-align: start;
+    text-align: center;
+    padding: 20px 10px;
+  }
+`;
+
 
 
 const HouseIcon = styled.div`
@@ -190,16 +215,7 @@ const PaintIcon = styled.div`
   color: black;
 `;
 
-const ServiceBoxWrapper = styled.div`
-  width: 100%;
-  margin-right: 0;
-  padding: 40px 20px;
-  @media (max-width: 860px) {
-    width: 100%;
-    text-align: center;
-    padding: 40px 0;
-  }
-`;
+
 const HeaderInfo = styled.div`
   @media (max-width: 860px) {
     text-align: center;
