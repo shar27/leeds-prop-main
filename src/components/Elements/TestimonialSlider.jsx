@@ -7,7 +7,7 @@ import TestimonialBox from "../Elements/TestimonialBox";
 export default function TestimonialSlider() {
   const settings = {
     infinite: true,
-    speed: 500,
+    speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,

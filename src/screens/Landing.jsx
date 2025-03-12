@@ -63,11 +63,12 @@ export default function Landing() {
       </FloatWrapper>
      
       <Badges/>
-      <Reviews />
+   
       <Services />
       <Projects/>
       {/* <Locations/> */}
       {/* <OtherAreas/> */}
+      <Reviews />
       <Contact />
       <Footer />
       <MobileStickyCTA />
