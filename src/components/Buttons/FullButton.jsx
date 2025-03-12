@@ -17,6 +17,7 @@ const Wrapper = styled.button`
   border: 1px solid ${(props) => (props.border ? "#707070" : "#7620ff")};
   background-color: ${(props) => (props.border ? "transparent" : "#FF3D00")};
   width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
  padding: 18px 20px;
   outline: none;
