@@ -15,7 +15,7 @@ const WhatsappIcon = () => {
       onClick={handleClick}
       style={{
         position: 'fixed',
-        bottom: '20px',
+        bottom: '40px',
         right: '35px',
         zIndex: 1000,
         cursor: 'pointer',

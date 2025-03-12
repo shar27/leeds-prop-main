@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import styled from "styled-components";
 import ReCAPTCHA from 'react-google-recaptcha';
 import ThankYou from '../../screens/ThankYou'
+import WhatsappIcon from '../Elements/WhatsappIcon';
 
 export default function Contact() {
   const [message, setMessage] = useState('');
@@ -41,14 +42,14 @@ export default function Contact() {
   };
 
   return (
-    <Wrapper id="contact">
+    <Wrapper id="contactlg">
       <div className="lightBg">
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">Get a Free Quote</h1>
           </HeaderInfo>
           <div className="row" style={{ paddingBottom: "30px" }}>
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-10">
               {message}
               <Form onSubmit={sendEmail} ref={form} id="contactForm">
                 <label className="font13">First name:</label>
@@ -96,6 +97,7 @@ export default function Contact() {
                 </SubmitWrapper>
               </Form>
             </div>
+         
           </div>
         </div>
       </div>
@@ -137,17 +139,18 @@ const Form = styled.form`
 `;
 const ButtonInput = styled.input`
   border: 1px solid #7620ff;
-  background-color: #7620ff !important;
+  background-color: #FF3D00 !important;
   width: 100%;
+  border-radius:6px;
   height: 50px !important;
-  padding: 15px !important;
+   padding: 18px 20px; 
   outline: none;
   color: #fff;
-  :hover {
-    background-color: #580cd2 !important;
-    border: 1px solid #7620ff;
-    color: #fff;
+  &:hover {
+    background-color: #FF3D00;
+     transform: scale(1.05);
   }
+
   @media (max-width: 991px) {
     margin: 0 auto;
   }

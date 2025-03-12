@@ -9,11 +9,9 @@ import Services from "../components/Sections/Services";
 import Reviews from "../components/Sections/Reviews";
 import Contact from "../components/Sections/Contact";
 import Footer from "../components/Sections/Footer";
-import Locations from "../components/Sections/Locations";
 import Badges from "../components/Sections/Badges";
-import WhatsApp from '../assets/img/whatsapp-business-icon.jpeg';
 import WhatsappIcon from '../components/Elements/WhatsappIcon'
-// import OtherAreas from "../components/Sections/OtherAreas";
+import MobileStickyCTA from "../components/Elements/MobileCta";
 
 export default function Landing() {
   const [showArrow, setShowArrow] = useState(false);
@@ -63,14 +61,18 @@ export default function Landing() {
           </ArrowButton>
         )}
       </FloatWrapper>
-      <Reviews />
+     
       <Badges/>
+   
       <Services />
       <Projects/>
       {/* <Locations/> */}
       {/* <OtherAreas/> */}
+      <Reviews />
       <Contact />
       <Footer />
+      <MobileStickyCTA />
+
     </>
   );
 }
@@ -93,7 +95,7 @@ const FloatWrapper = styled.div`
   right: 0px;
   z-index: 1000;
   @media (max-width: 460px) {
-    bottom: 40px;
+    bottom: 50px;
   right: 0px;
   }
 `;

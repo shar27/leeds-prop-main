@@ -11,6 +11,11 @@ import BurgerIcon from "../../assets/svg/BurgerIcon";
 export default function TopNavbar() {
   const [y, setY] = useState(window.scrollY);
   const [sidebarOpen, toggleSidebar] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
 
   useEffect(() => {
     const handleScroll = () => setY(window.scrollY);
@@ -73,11 +78,21 @@ export default function TopNavbar() {
                 Home
               </RouterLink>
             </li>
-            <li className="semiBold font15 pointer">
-              <RouterLink
+            <li
+      className="semiBold font15 pointer relative"
+      style={{ position: "relative" }}
+      onMouseEnter={toggleDropdown}
+      onMouseLeave={toggleDropdown}
+    >
+     
+      <span
+        className="pointer"
+        style={{ padding: "10px 15px", display: "inline-block" }}
+      >
+        <RouterLink
                 className="pointer"
                 style={{ padding: "10px 15px" }}
-                to="/#services"
+                to="#services"
                 onClick={() => {
                   setTimeout(() => {
                     const section = document.getElementById("services");
@@ -87,18 +102,43 @@ export default function TopNavbar() {
                   }, 0);
                 }}
               >
-                Services
-              </RouterLink>
-            </li>
-            <li className="semiBold font15 pointer">
-              <RouterLink
+        Services ▼
+        </RouterLink>
+      </span>
+     
+      {isDropdownOpen && (
+        <ul
+          className="dropdown-menu"
+          style={{
+            position: "absolute",
+            top: "100%",
+            left: 0,
+            background: "#fff",
+            border: "1px solid #ccc",
+            boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
+            zIndex: 1000,
+            listStyle: "none",
+            padding: "10px 0",
+            minWidth: "200px"
+          }}
+        >
+          <li
+            className="dropdown-item"
+            style={{ padding: "10px 20px", cursor: "pointer" }}
+          >
+           <RouterLink
                 className="pointer"
                 style={{ padding: "10px 15px" }}
                 to="/landlords"
               >
                 Guaranteed Rent
               </RouterLink>
-            </li>
+          </li>
+        
+        </ul>
+      )}
+    </li>
+       
             <li className="semiBold font15 pointer">
               <RouterLink
                 className="pointer"
@@ -112,10 +152,10 @@ export default function TopNavbar() {
               <RouterLink
                 className="pointer"
                 style={{ padding: "10px 15px" }}
-                to="/#contact"
+                to="/#contactlg"
                 onClick={() => {
                   setTimeout(() => {
-                    const section = document.getElementById("contact");
+                    const section = document.getElementById("contactlg");
                     if (section) {
                       section.scrollIntoView({ behavior: "smooth" });
                     }
@@ -135,7 +175,7 @@ export default function TopNavbar() {
                 📧 hello@liverpoolpropertymaintenance.com
               </a>
               <br />
-              <a href="/" style={{ padding: "10px 30px 10px 0" }}>
+              <a href="tel:0333 360 6113" style={{ padding: "10px 30px 10px 0" }}>
                 Call today 📞 0333 360 6113
               </a>
             </li>
