@@ -7,6 +7,9 @@ import Landlords from './screens/Landlords.jsx';
 import DynamicPage from "./components/DynamicPage.jsx";
 import Commercial from '../src/screens/Commercial.jsx'
 import ThankYou from "./screens/ThankYou.jsx";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 
 export default function App() {
   return (

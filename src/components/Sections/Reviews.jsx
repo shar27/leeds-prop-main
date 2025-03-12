@@ -54,13 +54,26 @@ export default function Reviews() {
                 Our trusted reviews speak for themselves
               </h1>
             </HeaderInfo>
+            <SliderWrapper>
+
             <TestimonialSlider />
+            </SliderWrapper>
           </div>
         </div>
       </div>
     </Wrapper>
   );
 }
+const SliderWrapper = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .slick-slide {
+    padding: 0 10px; /* spacing between slides */
+  }
+`;
+
 
 const Wrapper = styled.section`
   width: 100%;

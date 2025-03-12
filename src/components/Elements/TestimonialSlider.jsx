@@ -3,81 +3,96 @@ import Slider from "react-slick";
 import styled from "styled-components";
 // Components
 import TestimonialBox from "../Elements/TestimonialBox";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 export default function TestimonialSlider() {
   const settings = {
     infinite: true,
-    speed: 300,
+    speed: 200,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
+    dots: true,
     responsive: [
       {
-        breakpoint: 600,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
     ],
   };
+
   return (
-    <div>
+    <SliderContainer>
       <Slider {...settings}>
-        <LogoWrapper className="flexCenter">
+        <LogoWrapper>
           <TestimonialBox
             text="Contact their team late on a Friday night to arrange somebody to come and help me sort out a broken door."
             author="Ollie Brough"
           />
         </LogoWrapper>
-        <LogoWrapper className="flexCenter">
+        <LogoWrapper>
           <TestimonialBox
-            text="What a great job. Two charming and strong young men arrived punctually, immediately set to work clearing our garden and garage. There were some very heavy garden pots full of earth that we could not manage, no problem, emptied and loaded in no time. Thank you"
+            text="What a great job. Two charming and strong young men arrived punctually, immediately set to work clearing our garden and garage..."
             author="Christine"
           />
         </LogoWrapper>
-        <LogoWrapper className="flexCenter">
+        <LogoWrapper>
           <TestimonialBox
-            text="Cannot fault them. Super quick with their responses. I had a property which required multiple things fixing, painting, cleaning etc and they started this work really quickly after instruction. I would recommend them - their team are very friendly and always happy to help. Thank you so so much!"
+            text="Cannot fault them. Super quick with their responses. I had a property which required multiple things fixing, painting, cleaning etc..."
             author="HJS"
           />
         </LogoWrapper>
-        <LogoWrapper className="flexCenter">
+        <LogoWrapper>
           <TestimonialBox
-            text="Absolutely amazing.
-I had to co-ordinate a clearance from Bournemouth, and Shar was a pleasure to deal with.
-Professional, polite and reasonably priced, what's not to like!
-Tom, who carried out the clearance, was equally as professional and very friendly (I had to take the word of a friend on-site as I couldn't be there).
-Can't recommend these guys enough."
+            text="Absolutely amazing. I had to co-ordinate a clearance from Bournemouth, and Shar was a pleasure to deal with..."
             author="J Cameron"
           />
         </LogoWrapper>
-        <LogoWrapper className="flexCenter">
+        <LogoWrapper>
           <TestimonialBox
-            text="Your guys have done a fantastic job , and I very much appreciate you being able to fit us in to your busy schedule at short notice and making it easy for us too
-Many thanks
-Kind Regards
-Gerald"
+            text="Your guys have done a fantastic job, and I very much appreciate you being able to fit us in to your busy schedule at short notice..."
             author="Gerald Blake"
           />
         </LogoWrapper>
-        <LogoWrapper className="flexCenter"></LogoWrapper>
+        <LogoWrapper>
+          <TestimonialBox
+            text="Quick service and good communication"
+            author="Martyn Jellett"
+          />
+        </LogoWrapper>
+        <LogoWrapper>
+          <TestimonialBox
+            text="They were so accomadating. House clearance done in less than 24hrs of my first call. (It was an emergency)
+Absolutely recommend and very reasonably priced"
+            author="Pippa Chapman"
+          />
+        </LogoWrapper>
       </Slider>
-    </div>
+    </SliderContainer>
   );
 }
 
+const SliderContainer = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 0;
+`;
+
 const LogoWrapper = styled.div`
-  width: 90%;
-  padding: 0 5%;
-  cursor: pointer;
+  padding: 0 15px;
+  outline: none;
+
   :focus-visible {
     outline: none;
     border: 0px;
