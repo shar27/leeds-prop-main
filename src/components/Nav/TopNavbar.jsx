@@ -93,6 +93,14 @@ export default function TopNavbar() {
                 className="pointer"
                 style={{ padding: "10px 15px" }}
                 to="#services"
+                onClick={() => {
+                  setTimeout(() => {
+                    const section = document.getElementById("services");
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }, 0);
+                }}
               >
         Services ▼
         </RouterLink>
@@ -147,7 +155,7 @@ export default function TopNavbar() {
                 to="/#contactlg"
                 onClick={() => {
                   setTimeout(() => {
-                    const section = document.getElementById("contact");
+                    const section = document.getElementById("contactlg");
                     if (section) {
                       section.scrollIntoView({ behavior: "smooth" });
                     }
