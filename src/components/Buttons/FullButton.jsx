@@ -14,7 +14,7 @@ export default function FullButton({ title, action, border }) {
 }
 
 const Wrapper = styled.button`
-  border: 1px solid ${(props) => (props.border ? "#707070" : "#7620ff")};
+  border: 1px solid ${(props) => (props.border ? "#FF3D00" : "#FF3D00")};
   background-color: ${(props) => (props.border ? "transparent" : "#FF3D00")};
   width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -25,7 +25,7 @@ const Wrapper = styled.button`
   :hover {
    transform: scale(1.05);
     background-color: ${(props) => (props.border ? "transparent" : "#FF3D00")};
-    border: 1px solid #7620ff;
+    border: 1px solid #FF3D00;
     color: ${(props) => (props.border ? "#7620ff" : "#fff")};
   }
 `;
