@@ -73,14 +73,6 @@ export default function MiniForm() {
             className="font16"
           />
 
-          <input
-            required
-            type="text"
-            name="user_postcode"
-            placeholder="Postcode"
-            className="font16"
-          />
-
           <textarea
             rows="3"
             id="message"
@@ -100,7 +92,7 @@ export default function MiniForm() {
             <ButtonInput type="submit" >Request Your Free Quote</ButtonInput>
            
           </SubmitWrapper>
-          <p style={{textAlign: 'center', Padding: '2px'}}>✅ “We’ll call you back within 15 minutes!”</p>
+          <p style={{textAlign: 'center', Padding: '5px'}}>✅ “We’ll call you back within 15 minutes!”</p>
         </Form>
       </InnerFormWrapper>
     </OverlayWrapper>

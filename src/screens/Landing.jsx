@@ -9,11 +9,9 @@ import Services from "../components/Sections/Services";
 import Reviews from "../components/Sections/Reviews";
 import Contact from "../components/Sections/Contact";
 import Footer from "../components/Sections/Footer";
-import Locations from "../components/Sections/Locations";
 import Badges from "../components/Sections/Badges";
-import WhatsApp from '../assets/img/whatsapp-business-icon.jpeg';
 import WhatsappIcon from '../components/Elements/WhatsappIcon'
-// import OtherAreas from "../components/Sections/OtherAreas";
+import MobileStickyCTA from "../components/Elements/MobileCta";
 
 export default function Landing() {
   const [showArrow, setShowArrow] = useState(false);
@@ -72,6 +70,8 @@ export default function Landing() {
       {/* <OtherAreas/> */}
       <Contact />
       <Footer />
+      <MobileStickyCTA />
+
     </>
   );
 }
