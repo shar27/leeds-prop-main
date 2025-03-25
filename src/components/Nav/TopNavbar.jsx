@@ -175,7 +175,10 @@ export default function TopNavbar() {
                 📧 hello@liverpoolpropertymaintenance.com
               </a>
               <br />
-              <a href="tel:0333 360 6113" style={{ padding: "10px 30px 10px 0" }}>
+              <a href="tel:03333606113" style={{ padding: "10px 30px 10px 0" }}
+             onClick={() => gtag_report_conversion()}
+
+              >
                 Call today 📞 0333 360 6113
               </a>
             </li>
