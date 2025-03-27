@@ -47,8 +47,8 @@ export default function Contact() {
               </a>
           </li>
           <li className="semiBold font15 pointer">
-              <a href="tel:0333 360 6113" >
-                Call today 📞 0333 360 6113
+              <a href="tel:01513880361" >
+                Call today 📞 0151 388 0361
               </a>
             </li>
     
