@@ -25,6 +25,17 @@ export default function TopNavbar() {
     };
   }, []);
 
+  const handleCallClick = () => {
+    if (window.gtag) {
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-11182108205/R7cjCMncm6MaEK3chdQp',
+        value: 1.0,
+        currency: 'GBP'
+      });
+    }
+  };
+  
+
   return (
     <>
       <ContactInfoSmallScreen>
@@ -32,7 +43,7 @@ export default function TopNavbar() {
           📧 hello@liverpoolpropertymaintenance.com
         </a>
         <a href="tel:015138803613"
-         onClick={() => window.gtag_report_conversion && window.gtag_report_conversion()}
+         onClick={handleCallClick}
         >📞 0151 388 0361</a>
       </ContactInfoSmallScreen>
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
