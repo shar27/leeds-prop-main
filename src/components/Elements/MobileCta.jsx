@@ -14,6 +14,16 @@ const MobileStickyCTA = () => {
     );
   };
 
+  const handleCallClick = () => {
+    if (window.gtag) {
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-11182108205/R7cjCMncm6MaEK3chdQp',
+        value: 1.0,
+        currency: 'GBP'
+      });
+    }
+  };
+
   return (
     <StickyContainer>
       {/* <CTAButtonWhatsApp onClick={handleWhatsAppClick}>
@@ -21,7 +31,9 @@ const MobileStickyCTA = () => {
         WhatsApp Us
       </CTAButtonWhatsApp> */}
 
-      <CTAButtonCall href="tel:03333606113">
+      <CTAButtonCall href="tel:01513880361"
+       onClick={handleCallClick}
+      >
         <FaPhoneAlt size={16} style={{ marginRight: '8px' }} />
         Call Now
       </CTAButtonCall>
