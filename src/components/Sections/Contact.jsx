@@ -23,23 +23,33 @@ export default function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+  
     if (!recaptchaToken) {
       setMessage('Please complete the reCAPTCHA');
       return;
     }
-
+  
     emailjs.sendForm('service_go85cgq', 'template_zjh82na', form.current, 'n3cGJxtvclpiQjFrD')
       .then((result) => {
           console.log(result.text);
           setMessage('Your message has been received');
+  
+          // ✅ Fire Google Ads conversion
+          if (window.gtag) {
+            window.gtag('event', 'conversion', {
+              send_to: 'AW-11182108205/8i3RCJ-EtK4YEK3chdQp',
+            });
+          }
+  
+          // ✅ Then redirect
           window.location.replace("/thankyou");
           
       }, (error) => {
         setMessage('Error sending message, please email hello@liverpoolpropertymaintenance.com');
-          console.log(error.text);
+        console.log(error.text);
       });
   };
+  
 
   return (
     <Wrapper id="contactlg">
