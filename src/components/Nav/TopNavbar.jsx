@@ -31,7 +31,9 @@ export default function TopNavbar() {
         <a href="mailto:hello@liverpoolpropertymaintenance.com">
           📧 hello@liverpoolpropertymaintenance.com
         </a>
-        <a href="tel:015138803613">📞 0151 388 0361</a>
+        <a href="tel:015138803613"
+         onClick={() => window.gtag_report_conversion && window.gtag_report_conversion()}
+        >📞 0151 388 0361</a>
       </ContactInfoSmallScreen>
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
@@ -175,7 +177,9 @@ export default function TopNavbar() {
                 📧 hello@liverpoolpropertymaintenance.com
               </a>
               <br />
-              <a href="tel:01513880361" style={{ padding: "10px 30px 10px 0" }}
+              <a href="tel:01513880361" 
+               onClick={() => window.gtag_report_conversion && window.gtag_report_conversion()}
+              style={{ padding: "10px 30px 10px 0" }}
              
 
               >
