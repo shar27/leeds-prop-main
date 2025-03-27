@@ -176,7 +176,7 @@ export default function TopNavbar() {
               </a>
               <br />
               <a href="tel:01513880361" style={{ padding: "10px 30px 10px 0" }}
-             onClick={() => gtag_report_conversion()}
+             
 
               >
                 Call today 📞 0333 360 6113
