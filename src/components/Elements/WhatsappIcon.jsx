@@ -7,8 +7,23 @@ const WhatsappIcon = () => {
   const message = 'Hello! I have an enquiry.'; // Pre-filled message
 
   const handleClick = () => {
-    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+    // Google Ads conversion tracking
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-11182108205/RvGwCMfJhbEaEK3chdQp',
+        event_callback: () => {
+          window.open(url, '_blank');
+        }
+      });
+    } else {
+      // fallback in case gtag hasn't loaded yet
+      window.open(url, '_blank');
+    }
   };
+
+  
 
   return (
     <div
