@@ -1,12 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import TopNavbar from "../Nav/TopNavbar";
-
-
+import WorkShowcaseSlider from "./WorkSlideShow";
 
 export default function Landlords() {
- 
-  const videoSrc = "https://res.cloudinary.com/daaahgwfy/video/upload/f_auto:video,q_auto/e6pvd1on8opfkm1a9nyc";
 
   return (
     <>
@@ -17,10 +14,10 @@ export default function Landlords() {
           <ContentSection>
             <SubHeader className="font40">How we help.</SubHeader>
             <Paragraph>
-            We carry out a range of property maintenance services for landlords, solicitors, letting agents, and homeowners.
+              We carry out a range of property maintenance services for landlords, solicitors, letting agents, and homeowners.
             </Paragraph>
             <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '0.5rem' }}>
-             Services:
+              Services:
             </h3>
             <BenefitsList>
               <BenefitItem>✔ Deep cleaning</BenefitItem>
@@ -35,47 +32,22 @@ export default function Landlords() {
             </BenefitsList>
           </ContentSection>
 
-          <VideoWrapper>
-      <Video
-      aria-label="Before and after property maintenance video"
-        controls
-        src={videoSrc}
-        preload="auto"
-        playsInline
-        muted
-        onContextMenu={(e) => e.preventDefault()} // disables right-click context menu
-        autoPlay
-        loop
-      >
-        Your browser does not support the video tag.
-      </Video>
-    </VideoWrapper>
-        
+          <SliderWrapper>
+            <WorkShowcaseSlider />
+          </SliderWrapper>
+
         </ContentAndSlideshowWrapper>
       </Container>
-
     </>
   );
 }
 
-const VideoWrapper = styled.div`
+const SliderWrapper = styled.div`
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
-`;
-
-const Video = styled.video`
-  width: 100%;
-  height: 500px;
-  max-width: 600px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-  @media (max-width: 768px) {
-    max-width: 100%;
-  }
 `;
 
 const Container = styled.div`
@@ -95,33 +67,33 @@ const ContentAndSlideshowWrapper = styled.div`
   display: flex;
   flex-direction: row;
   padding: 10px;
-  gap: 20px; /* Space between content and slideshow */
+  gap: 20px;
 
   @media (max-width: 768px) {
-    flex-direction: column; /* Stack on smaller screens */
-    gap: 10px; /* Adjust gap for stacked layout */
+    flex-direction: column;
+    gap: 10px;
     margin-top:10px;
   }
 `;
 
 const ContentSection = styled.div`
-  flex: 1; /* Allow content to take available space */
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-center; /* Align items to the start */
+  align-items: flex-start;
 `;
 
 const SubHeader = styled.h2`
-  
   font-weight: bold;
   margin-bottom: 1rem;
 
   @media (max-width: 768px) {
-    font-size: 1.5rem; /* Smaller font size on mobile */
+    font-size: 1.5rem;
   }
 `;
+
 const HeaderP = styled.div`
-   max-width: 470px;
+  max-width: 470px;
   padding: 15px 0 50px 0;
   line-height: 1.5rem;
   @media (max-width: 960px) {
@@ -132,11 +104,10 @@ const HeaderP = styled.div`
 `;
 
 const Paragraph = styled.p`
-  
   margin-bottom: 1.5rem;
 
   @media (max-width: 768px) {
-    font-size: 1rem; /* Smaller font size on mobile */
+    font-size: 1rem;
   }
 `;
 
@@ -151,7 +122,7 @@ const BenefitItem = styled.li`
 `;
 
 const SlideshowContainer = styled.div`
-  flex: 1; /* Allow slideshow to take available space */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
