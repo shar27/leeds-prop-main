@@ -17,7 +17,7 @@ export default function Landlords() {
           <ContentSection>
             <SubHeader className="font40">How we help.</SubHeader>
             <Paragraph>
-              We have been carrying our various property maintenance related services for landlords, solicitors, letting agents and individuals
+            We carry out a range of property maintenance services for landlords, solicitors, letting agents, and homeowners.
             </Paragraph>
             <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '0.5rem' }}>
              Services:
@@ -37,6 +37,7 @@ export default function Landlords() {
 
           <VideoWrapper>
       <Video
+      aria-label="Before and after property maintenance video"
         controls
         src={videoSrc}
         preload="auto"
