@@ -30,20 +30,16 @@ export default function Services() {
             </p>
           </HeaderInfo>
           <ServiceBoxRow className="flex">
-            <ServiceBoxWrapper>
-              <HouseIcon>
-                <HouseOutlinedIcon
+          <ServiceBoxWrapper>
+              <HandyManIcon>
+                <ConstructionIcon
                   sx={{
                     width: 100,
                     height: 100,
                   }}
                 />
-              </HouseIcon>
-
-              <h4>
-                Find a Tenant Services <br />
-                Sell your home/Land
-              </h4>
+              </HandyManIcon>
+              <h4>Handy man repairs</h4>
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <VanIcon>
@@ -80,18 +76,22 @@ export default function Services() {
                 End of tenancy <br /> & Deep cleaning
               </h4>
             </ServiceBoxWrapper>
+           
             <ServiceBoxWrapper>
-              <HandyManIcon>
-                <ConstructionIcon
+              <HouseIcon>
+                <HouseOutlinedIcon
                   sx={{
                     width: 100,
                     height: 100,
                   }}
                 />
-              </HandyManIcon>
-              <h4>Handy man repairs</h4>
-            </ServiceBoxWrapper>
+              </HouseIcon>
 
+              <h4>
+                Find a Tenant Services <br />
+                Sell your home/Land
+              </h4>
+            </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <PaintIcon>
                 <FormatPaintOutlinedIcon
