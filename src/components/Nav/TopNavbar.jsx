@@ -225,7 +225,7 @@ const ContactInfoSmallScreen = styled.div`
     display: block;
     z-index: 999;
     font-size:14px;
-      text-align: start;
+      text-align: center;
   }
 `;
 
