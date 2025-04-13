@@ -36,10 +36,17 @@ export default function Contact() {
   
           // ✅ Fire Google Ads conversion
           if (window.gtag) {
+            // Request quote
+            window.gtag('event', 'conversion', {
+              send_to: 'AW-11182108205/E1zhCM3KzqoaEK3chdQp',
+            });
+          
+            // Website lead
             window.gtag('event', 'conversion', {
               send_to: 'AW-11182108205/8i3RCJ-EtK4YEK3chdQp',
             });
           }
+          
   
           // ✅ Then redirect
           window.location.replace("/thankyou");
