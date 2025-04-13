@@ -23,26 +23,35 @@ export default function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+  
     if (!recaptchaToken) {
       setMessage("Please complete the reCAPTCHA");
       return;
     }
-
+  
+    const formEl = form.current;
+  
+    // ✅ Enhanced conversions: capture user data
+    if (window.gtag) {
+      window.gtag("set", "user_data", {
+        email: formEl.user_email.value,
+        phone_number: formEl.user_number.value,
+        first_name: formEl.fname.value,
+        address: {
+          postal_code: formEl.user_postcode.value,
+          country: "GB"
+        }
+      });
+    }
+  
     emailjs
-      .sendForm(
-        "service_go85cgq",
-        "template_zjh82na",
-        form.current,
-        "n3cGJxtvclpiQjFrD"
-      )
+      .sendForm("service_go85cgq", "template_zjh82na", formEl, "n3cGJxtvclpiQjFrD")
       .then(
         (result) => {
           console.log(result.text);
           setMessage("Your message has been received");
-
+  
           // ✅ Fire Google Ads conversion
-          // ✅ Fire Google Ads conversion (ONLY the correct one)
           if (window.gtag) {
             window.gtag("event", "conversion", {
               send_to: "AW-11182108205/Fl-zCJPb7bcaEK3chdQp",
@@ -50,7 +59,7 @@ export default function Contact() {
               currency: "GBP",
             });
           }
-
+  
           // ✅ Then redirect
           window.location.replace("/thankyou");
         },
@@ -62,6 +71,7 @@ export default function Contact() {
         }
       );
   };
+  
 
   return (
     <Wrapper id="contactlg">
