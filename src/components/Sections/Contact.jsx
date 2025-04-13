@@ -1,12 +1,12 @@
-import React, { useRef, useState, useEffect } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useRef, useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 import styled from "styled-components";
-import ReCAPTCHA from 'react-google-recaptcha';
-import ThankYou from '../../screens/ThankYou'
-import WhatsappIcon from '../Elements/WhatsappIcon';
+import ReCAPTCHA from "react-google-recaptcha";
+import ThankYou from "../../screens/ThankYou";
+import WhatsappIcon from "../Elements/WhatsappIcon";
 
 export default function Contact() {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const [recaptchaToken, setRecaptchaToken] = useState(null);
   const form = useRef();
 
@@ -23,40 +23,45 @@ export default function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-  
+
     if (!recaptchaToken) {
-      setMessage('Please complete the reCAPTCHA');
+      setMessage("Please complete the reCAPTCHA");
       return;
     }
-  
-    emailjs.sendForm('service_go85cgq', 'template_zjh82na', form.current, 'n3cGJxtvclpiQjFrD')
-      .then((result) => {
+
+    emailjs
+      .sendForm(
+        "service_go85cgq",
+        "template_zjh82na",
+        form.current,
+        "n3cGJxtvclpiQjFrD"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-          setMessage('Your message has been received');
-  
+          setMessage("Your message has been received");
+
           // ✅ Fire Google Ads conversion
+          // ✅ Fire Google Ads conversion (ONLY the correct one)
           if (window.gtag) {
-            // Request quote
-            window.gtag('event', 'conversion', {
-              send_to: 'AW-11182108205/E1zhCM3KzqoaEK3chdQp',
-            });
-          
-            // Website lead
-            window.gtag('event', 'conversion', {
-              send_to: 'AW-11182108205/8i3RCJ-EtK4YEK3chdQp',
+            window.gtag("event", "conversion", {
+              send_to: "AW-11182108205/Fl-zCJPb7bcaEK3chdQp",
+              value: 1.0,
+              currency: "GBP",
             });
           }
-          
-  
+
           // ✅ Then redirect
           window.location.replace("/thankyou");
-          
-      }, (error) => {
-        setMessage('Error sending message, please email hello@liverpoolpropertymaintenance.com');
-        console.log(error.text);
-      });
+        },
+        (error) => {
+          setMessage(
+            "Error sending message, please email hello@liverpoolpropertymaintenance.com"
+          );
+          console.log(error.text);
+        }
+      );
   };
-  
 
   return (
     <Wrapper id="contactlg">
@@ -70,16 +75,40 @@ export default function Contact() {
               {message}
               <Form onSubmit={sendEmail} ref={form} id="contactForm">
                 <label className="font13">First name:</label>
-                <input required type="text" name="fname" className="font20 extraBold" />
+                <input
+                  required
+                  type="text"
+                  name="fname"
+                  className="font20 extraBold"
+                />
                 <label className="font13">Number:</label>
-                <input required type="tel" name="user_number" className="font20 extraBold" />
+                <input
+                  required
+                  type="tel"
+                  name="user_number"
+                  className="font20 extraBold"
+                />
                 <label className="font13">Email:</label>
-                <input required type="email" name="user_email" className="font20 extraBold" />
+                <input
+                  required
+                  type="email"
+                  name="user_email"
+                  className="font20 extraBold"
+                />
                 <label className="font13">Postcode:</label>
-                <input required type="text" name="user_postcode" className="font20 extraBold" />
+                <input
+                  required
+                  type="text"
+                  name="user_postcode"
+                  className="font20 extraBold"
+                />
 
                 <label className="font13">Enquiry Type:</label>
-                <select required name="user_enquiry" className="font20 extraBold">
+                <select
+                  required
+                  name="user_enquiry"
+                  className="font20 extraBold"
+                >
                   <option value="handyman">Handyman</option>
                   <option value="cleaning">Cleaning</option>
                   <option value="clearance">Clearance</option>
@@ -91,16 +120,34 @@ export default function Contact() {
                   <option value="Commercial">Commercial</option>
                 </select>
 
-                <label className="font13">Have you sent us photos on WhatsApp or Email?</label>
-                <select required name="user_photos" className="font20 extraBold">
+                <label className="font13">
+                  Have you sent us photos on WhatsApp or Email?
+                </label>
+                <select
+                  required
+                  name="user_photos"
+                  className="font20 extraBold"
+                >
                   <option value="Yes">Yes</option>
                   <option value="No">No</option>
                 </select>
 
                 <label className="font13">Subject:</label>
-                <input required type="text" name="subject" className="font20 extraBold" />
+                <input
+                  required
+                  type="text"
+                  name="subject"
+                  className="font20 extraBold"
+                />
                 <label className="font13">Description:</label>
-                <textarea rows="4" cols="50" type="text" id="message" name="message" className="font20 extraBold" />
+                <textarea
+                  rows="4"
+                  cols="50"
+                  type="text"
+                  id="message"
+                  name="message"
+                  className="font20 extraBold"
+                />
 
                 <input type="hidden" name="current_url" />
 
@@ -108,13 +155,17 @@ export default function Contact() {
                   sitekey="6LfV9nkqAAAAAKJA-KJdoNsvQDXNTbBDIxkDXKbp"
                   onChange={onReCAPTCHAChange}
                 />
-              
+
                 <SubmitWrapper className="flex">
-                  <ButtonInput type="submit" value="Submit" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
+                  <ButtonInput
+                    type="submit"
+                    value="Submit"
+                    className="pointer animate radius8"
+                    style={{ maxWidth: "220px" }}
+                  />
                 </SubmitWrapper>
               </Form>
             </div>
-         
           </div>
         </div>
       </div>
@@ -123,7 +174,6 @@ export default function Contact() {
 }
 
 // Styled components...
-
 
 const Wrapper = styled.section`
   width: 100%;
@@ -156,16 +206,16 @@ const Form = styled.form`
 `;
 const ButtonInput = styled.input`
   border: 1px solid #7620ff;
-  background-color: #FF3D00 !important;
+  background-color: #ff3d00 !important;
   width: 100%;
-  border-radius:6px;
+  border-radius: 6px;
   height: 50px !important;
-   padding: 18px 20px; 
+  padding: 18px 20px;
   outline: none;
   color: #fff;
   &:hover {
-    background-color: #FF3D00;
-     transform: scale(1.05);
+    background-color: #ff3d00;
+    transform: scale(1.05);
   }
 
   @media (max-width: 991px) {
@@ -173,8 +223,8 @@ const ButtonInput = styled.input`
   }
 `;
 const ContactImgBox = styled.div`
-  max-width: 180px; 
-  align-self: flex-end; 
+  max-width: 180px;
+  align-self: flex-end;
   margin: 10px 30px 10px 0;
 `;
 const SubmitWrapper = styled.div`
@@ -183,11 +233,3 @@ const SubmitWrapper = styled.div`
     margin-bottom: 50px;
   }
 `;
-
-
-
-
-
-
-
-
