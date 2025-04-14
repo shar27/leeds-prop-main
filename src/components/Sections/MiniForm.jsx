@@ -35,8 +35,11 @@ export default function MiniForm() {
         // ✅ Google Ads conversion tracking
         if (window.gtag) {
           window.gtag('event', 'conversion', {
-            send_to: 'AW-11182108205/8i3RCJ-EtK4YEK3chdQp',
+            send_to: 'AW-11182108205/hlcPCMjeqrgaEK3chdQp',
+            value: 1.0,
+            currency: 'GBP',
           });
+          
         }
   
         // ✅ Then redirect
