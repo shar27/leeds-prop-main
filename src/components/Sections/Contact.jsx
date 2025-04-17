@@ -31,7 +31,7 @@ export default function Contact() {
   
     const formEl = form.current;
   
-    // ✅ Enhanced conversions: capture user data
+    // Optional: Enhanced conversions
     if (window.gtag) {
       window.gtag("set", "user_data", {
         email: formEl.user_email.value,
@@ -51,26 +51,16 @@ export default function Contact() {
           console.log(result.text);
           setMessage("Your message has been received");
   
-          // ✅ Fire Google Ads conversion
-          if (window.gtag) {
-            window.gtag("event", "conversion", {
-              send_to: "AW-11182108205/Fl-zCJPb7bcaEK3chdQp",
-              value: 1.0,
-              currency: "GBP",
-            });
-          }
-  
-          // ✅ Then redirect
+          // 🔁 Redirect to thank you page (conversion tag fires there)
           window.location.replace("/thankyou");
         },
         (error) => {
-          setMessage(
-            "Error sending message, please email hello@liverpoolpropertymaintenance.com"
-          );
+          setMessage("Error sending message, please email hello@liverpoolpropertymaintenance.com");
           console.log(error.text);
         }
       );
   };
+  
   
 
   return (
