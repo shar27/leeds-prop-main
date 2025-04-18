@@ -13,6 +13,7 @@ import Badges from "../components/Sections/Badges";
 import WhatsappIcon from '../components/Elements/WhatsappIcon'
 import MobileStickyCTA from "../components/Elements/MobileCta";
 
+
 export default function Landing() {
   const [showArrow, setShowArrow] = useState(false);
 

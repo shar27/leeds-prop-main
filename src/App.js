@@ -7,6 +7,7 @@ import Landlords from './screens/Landlords.jsx';
 import DynamicPage from "./components/DynamicPage.jsx";
 import Commercial from '../src/screens/Commercial.jsx'
 import ThankYou from "./screens/ThankYou.jsx";
+import JoineryServices from "./screens/JoineryPage.jsx";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
@@ -24,7 +25,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/landlords" element={<Landlords />} />
-          <Route path=":commercial" element={<Commercial/>}/>
+          <Route path="/commercial" element={<Commercial/>}/>
+          <Route path="joinery" element={<JoineryServices/>}/>
+          <Route path="thankyou" element={<ThankYou/>}/>
           <Route path=":slug" element={<DynamicPage/>}/>
           <Route path="thankyou" element={<ThankYou/>}/>
         </Routes>
