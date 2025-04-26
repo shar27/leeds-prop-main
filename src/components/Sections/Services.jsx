@@ -234,24 +234,6 @@ const ServiceBoxWrapper = styled.div`
 
 
 
-const HouseIcon = styled.div`
-  color: black;
-`;
-const VanIcon = styled.div`
-  color: black;
-`;
-const CleaningIcon = styled.div`
-  color: black;
-`;
-
-const HandyManIcon = styled.div`
-  color: black;
-`;
-
-const PaintIcon = styled.div`
-  color: black;
-`;
-
 
 const HeaderInfo = styled.div`
   @media (max-width: 860px) {
