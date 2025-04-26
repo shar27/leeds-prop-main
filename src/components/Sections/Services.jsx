@@ -13,7 +13,7 @@ import CameraOutdoorIcon from "@mui/icons-material/CameraOutdoor";
 import LightIcon from "@mui/icons-material/Light";
 import RoofingIcon from "@mui/icons-material/Roofing";
 import PlumbingIcon from "@mui/icons-material/Plumbing";
-
+import CropDinIcon from '@mui/icons-material/CropDin';
 
 
 export default function Services() {
@@ -52,6 +52,19 @@ export default function Services() {
               </VanIcon>
               <h4>
                 House Clearance <br /> & Removals
+              </h4>
+            </ServiceBoxWrapper>
+            <ServiceBoxWrapper>
+              <VanIcon>
+                <LocalShippingIcon
+                  sx={{
+                    width: 100,
+                    height: 100,
+                  }}
+                />
+              </VanIcon>
+              <h4>
+                Window Washing
               </h4>
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
