@@ -42,9 +42,14 @@ export default function Reviews() {
             </ReviewsWrapper>
             {/* single review */}
             <ReviewWrapper>
-              <img src={AddImage3} />
+              <img src="https://res.cloudinary.com/dobirrdcu/image/upload/v1745686387/review_eixgsz.png" />
             </ReviewWrapper>
+            
+         
           </ServiceBoxRow>
+          <ReviewWrapper>
+              <img src={AddImage3} width={500}/>
+            </ReviewWrapper>
           <GoogleWrapper>
             <img src="https://res.cloudinary.com/daaahgwfy/image/upload/c_thumb,w_200,g_face/v1741706709/rgtjdpp1iocrtlfudrfk.jpg" />
           </GoogleWrapper>

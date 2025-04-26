@@ -164,7 +164,15 @@ export default function TopNavbar() {
         </ul>
       )}
     </li>
-       
+    <li className="semiBold font15 pointer">
+              <RouterLink
+                className="pointer"
+                style={{ padding: "10px 15px" }}
+                to="/zero-percent-finance"
+              >
+                0% Finance 
+              </RouterLink>
+            </li>
             <li className="semiBold font15 pointer">
               <RouterLink
                 className="pointer"

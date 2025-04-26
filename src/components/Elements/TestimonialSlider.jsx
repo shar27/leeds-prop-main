@@ -35,6 +35,12 @@ export default function TestimonialSlider() {
   return (
     <SliderContainer>
       <Slider {...settings}>
+      <LogoWrapper>
+          <TestimonialBox
+            text="Not had a very good time with builders lately and was looking for a trusted handyman. So pleased I found Swift . They have restored my faith that there are still some people around who take pride in their work. They are now going to be my first point of call for the odd jobs that nobody wants to do properly anymore. Paul turned up on time did a really good job of cleaning my windows and also went above and beyond by refixing pipes that have only recently been renewed. I am very grateful and will use him again and recommend to others. Thank you Swift."
+            author="Sandra"
+          />
+        </LogoWrapper>
         <LogoWrapper>
           <TestimonialBox
             text="Contact their team late on a Friday night to arrange somebody to come and help me sort out a broken door."

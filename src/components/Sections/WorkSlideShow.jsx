@@ -11,6 +11,7 @@ const slides = [
   { type: "image", src: "https://res.cloudinary.com/dobirrdcu/image/upload/v1743156118/Before_2_e75vyq.png" }, 
   { type: "video", src: "https://res.cloudinary.com/daaahgwfy/video/upload/f_auto:video,q_auto/e6pvd1on8opfkm1a9nyc.mp4" },
   { type: "image", src: "https://res.cloudinary.com/dobirrdcu/image/upload/v1743155316/Before_1_lrrlva.png" },
+  { type: "image", src: "https://res.cloudinary.com/dobirrdcu/image/upload/v1745685781/IMG-20250426-WA0013_lzj6pk.jpg" },
   { type: "video", src: "https://res.cloudinary.com/dobirrdcu/video/upload/v1743155368/VID-20241211-WA0002_dzpe82.mp4" },
 ];
 
