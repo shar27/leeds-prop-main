@@ -56,6 +56,7 @@ export default function Services() {
             <ServiceBoxWrapper>
              
                 <WindowIcon
+                style={{ color: 'black' }}
                   sx={{
                     width: 100,
                     height: 100,
@@ -69,6 +70,7 @@ export default function Services() {
             <ServiceBoxWrapper>
              
                 <HouseIcon
+                style={{ color: 'black' }}
                   sx={{
                     width: 100,
                     height: 100,
@@ -82,6 +84,7 @@ export default function Services() {
             <ServiceBoxWrapper>
              
                 <RoofingIcon
+                style={{ color: 'black' }}
                   sx={{
                     width: 100,
                     height: 100,
@@ -150,6 +153,7 @@ export default function Services() {
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <RoofingIcon
+              style={{ color: 'black' }}
                 sx={{
                   width: 100,
                   height: 100,
