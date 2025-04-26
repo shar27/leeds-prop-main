@@ -32,7 +32,7 @@ export default function Badges() {
 }
 
 const Wrapper = styled.div`
-  padding: 60px 20px;
+  padding: 40px 20px;
 `;
 
 const HeaderInfo = styled.div`
