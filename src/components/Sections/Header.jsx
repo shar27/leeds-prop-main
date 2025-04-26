@@ -16,16 +16,21 @@ export default function Header() {
       <LeftSide className="flexCenter">
         <div>
         <HeadingTag>
-            Property maintenance specialists covering Liverpool, Manchester  & surrounding areas.
+        Liverpool Property Maintenance -
+        Serving Liverpool & surrounding areas.
           </HeadingTag>
+          <LargeHeading>
           <h2 className="extraBold font40">Liverpool Property Maintenance</h2>
           
-          
           <HeaderP className="font13 semiBold">
-          Trusted by Landlords, Agents & Homeowners. Call Now for a Free Quote!
-          </HeaderP>
+          Fully insured and trusted by Liverpool landlords, agents, and homeowners. Free quotes with 0% finance available.
 
-          
+          </HeaderP>
+</LargeHeading>
+          <SmallHeading>
+
+              Fully insured and trusted by Liverpool landlords, agents, and homeowners. Free quotes with 0% finance available.
+          </SmallHeading>
           <BtnWrapper>
             <a href="#contactForm">
             <FullButton title="Request Your Free Quote"  />
@@ -58,6 +63,24 @@ display:none;
 }
 `
 
+const SmallHeading = styled.div `
+
+@media (min-width:1024px){
+display:none;
+}
+
+@media (max-width:1024px){
+display:block;
+}
+`
+
+const LargeHeading = styled.div `
+@media (max-width:1024px){
+display:none;
+
+}
+
+`
 const ContactWrapper = styled.div`
   position: absolute;
   top: 50%;

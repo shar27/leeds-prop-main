@@ -96,15 +96,6 @@ export default function Services() {
               </h4>
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
-              <CameraOutdoorIcon
-                sx={{
-                  width: 100,
-                  height: 100,
-                }}
-              ></CameraOutdoorIcon>
-              <h4>CCTV Installation</h4>
-            </ServiceBoxWrapper>
-            <ServiceBoxWrapper>
               <CleaningIcon>
                 <CleaningServicesOutlinedIcon
                   sx={{
@@ -144,6 +135,7 @@ export default function Services() {
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <LightIcon
+              style={{ color: 'black' }}
                 sx={{
                   width: 100,
                   height: 100,
@@ -188,12 +180,8 @@ const BtnWrapper = styled.div`
   }
 `;
 const ServiceBoxRow = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-
-  @media (max-width: 760px) {
-    display: flex;
+ 
+  display: flex;
     overflow-x: auto;
     gap: 20px;
     padding-bottom: 10px;
@@ -202,22 +190,23 @@ const ServiceBoxRow = styled.div`
 
     /* Scrollbar styling */
     &::-webkit-scrollbar {
-      height: 8px;
+      height: 10px;
     }
 
     &::-webkit-scrollbar-thumb {
-      background: #888;
+      background: #FF3D00;
       border-radius: 4px;
     }
 
     &::-webkit-scrollbar-thumb:hover {
-      background: #555;
+      background: #FF3D00;
     }
 
     &::-webkit-scrollbar-track {
       background: #f1f1f1;
     }
-  }
+
+  
 `;
 
 const ServiceBoxWrapper = styled.div`
