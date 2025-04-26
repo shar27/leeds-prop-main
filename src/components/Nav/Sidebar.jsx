@@ -50,6 +50,16 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
         </li>
         <li className="semiBold font15 pointer">
           <Link
+            to="/zero-percent-finance"
+            onClick={() => handleScroll("services")}
+            className="whiteColor"
+            style={{ padding: "10px 15px", display: 'block' }}
+          >
+            0% Finance
+          </Link>
+        </li>
+        <li className="semiBold font15 pointer">
+          <Link
             to="/joinery"
             onClick={() => handleScroll("services")}
             className="whiteColor"
