@@ -26,6 +26,9 @@ export default function Landlords() {
               <BenefitItem>✔ Waste/Furniture removal</BenefitItem>
               <BenefitItem>✔ Handyman repair</BenefitItem>
               <BenefitItem>✔ Roof repair</BenefitItem>
+              <BenefitItem>✔ Window Washing</BenefitItem>
+              <BenefitItem>✔ Gutter Cleaning</BenefitItem>
+              <BenefitItem>✔ Pressure Washing</BenefitItem>
               <BenefitItem>✔ Fence repair</BenefitItem>
               <BenefitItem>✔ Electrical </BenefitItem>
               <BenefitItem>✔ Plumbing </BenefitItem>
