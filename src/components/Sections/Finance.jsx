@@ -52,6 +52,8 @@ const ZeroPercentFinance = () => {
 export default ZeroPercentFinance;
 
 const Section = styled.section`
+  max-width:600px;
+  margin: 0 auto;
   padding: 3rem 1rem;
   background: #ffffff;
   text-align: center;
@@ -82,21 +84,22 @@ const Subtitle = styled.p`
 const Grid = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem; /* More breathing space on mobile */
 
   @media(min-width: 768px) {
     flex-direction: row;
     justify-content: center;
+    gap: 1.5rem; /* tighten gap on desktop */
   }
 `;
+
 
 const Card = styled.div`
   background: ${props => props.bg || "#fff"};
   color: #222;
   padding: 2rem 1.5rem;
   border-radius: 12px;
-  width: 100%;
-  max-width: 300px;
+  width: 100%; /* full width on mobile */
   text-align: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: transform 0.3s ease;
@@ -104,7 +107,12 @@ const Card = styled.div`
   &:hover {
     transform: translateY(-5px);
   }
+
+  @media(min-width: 768px) {
+    max-width: 300px; /* fixed width on desktop */
+  }
 `;
+
 
 const CardTitle = styled.h3`
   font-size: 1.2rem;
