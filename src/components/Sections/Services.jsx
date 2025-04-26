@@ -14,7 +14,6 @@ import LightIcon from "@mui/icons-material/Light";
 import RoofingIcon from "@mui/icons-material/Roofing";
 import PlumbingIcon from "@mui/icons-material/Plumbing";
 import WindowIcon from '@mui/icons-material/Window';
-import RoofingIcon from '@mui/icons-material/Roofing';
 import HouseIcon from '@mui/icons-material/House';
 
 export default function Services() {
