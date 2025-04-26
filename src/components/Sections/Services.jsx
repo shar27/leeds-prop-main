@@ -117,21 +117,6 @@ export default function Services() {
             </ServiceBoxWrapper>
            
             <ServiceBoxWrapper>
-              <HouseIcon>
-                <HouseOutlinedIcon
-                  sx={{
-                    width: 100,
-                    height: 100,
-                  }}
-                />
-              </HouseIcon>
-
-              <h4>
-                Find a Tenant Services <br />
-                Sell your home/Land
-              </h4>
-            </ServiceBoxWrapper>
-            <ServiceBoxWrapper>
               <PaintIcon>
                 <FormatPaintOutlinedIcon
                   sx={{
