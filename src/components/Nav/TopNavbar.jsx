@@ -170,7 +170,7 @@ export default function TopNavbar() {
                 style={{ padding: "10px 15px" }}
                 to="/zero-percent-finance"
               >
-                0% Finance 
+                0% Interest Finance
               </RouterLink>
             </li>
             <li className="semiBold font15 pointer">

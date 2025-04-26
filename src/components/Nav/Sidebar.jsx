@@ -55,7 +55,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             className="whiteColor"
             style={{ padding: "10px 15px", display: 'block' }}
           >
-            0% Finance
+            0% Interest Finance
           </Link>
         </li>
         <li className="semiBold font15 pointer">
