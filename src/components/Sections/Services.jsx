@@ -8,7 +8,6 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import CleaningServicesOutlinedIcon from "@mui/icons-material/CleaningServicesOutlined";
 import ConstructionIcon from "@mui/icons-material/Construction";
 import FormatPaintOutlinedIcon from "@mui/icons-material/FormatPaintOutlined";
-import HouseOutlinedIcon from "@mui/icons-material/HouseOutlined";
 import CameraOutdoorIcon from "@mui/icons-material/CameraOutdoor";
 import LightIcon from "@mui/icons-material/Light";
 import RoofingIcon from "@mui/icons-material/Roofing";
