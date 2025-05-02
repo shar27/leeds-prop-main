@@ -24,7 +24,7 @@ export default function Contact() {
               © {getCurrentYear()} - <span className="purpleColor font13">Property Maintenance Liverpool</span> All Right Reserved
             </StyleP> */}
             <StyleP className="whiteColor font13">
-             <h6 className="whiteColor font13">Property Maintenance Liverpool is 
+             <h6 className="whiteColor font13">Leeds Property Maintenance is 
              trading name for <br/> SWIFT UK PROPERTY INVESTMENTS LTD. <br/>
              Company number: 15244665
              
@@ -40,15 +40,15 @@ export default function Contact() {
     
       <li className="semiBold font15 pointer">
               <a
-                href="mailto:hello@liverpoolpropertymaintenance.com"
+                href="mailto:hello@leeds-property-maintenance.co.uk  "
                 
               >
-                📧 hello@liverpoolpropertymaintenance.com
+                📧 hello@leeds-property-maintenance.co.uk  
               </a>
           </li>
           <li className="semiBold font15 pointer">
-              <a href="tel:01513880361" >
-                Call today 📞 0151 388 0361
+              <a href="tel:03333606113" >
+                Call today 📞 0333 360 6113
               </a>
             </li>
     

@@ -46,7 +46,7 @@ export default function MiniForm() {
         window.location.replace("/thankyou");
   
       }, (error) => {
-        setMessage('Error sending message, please email hello@liverpoolpropertymaintenance.com');
+        setMessage('Error sending message, please email hello@leeds-property-maintenance.co.uk');
         console.log(error.text);
       });
   };

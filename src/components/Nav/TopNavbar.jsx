@@ -40,12 +40,12 @@ export default function TopNavbar() {
   return (
     <>
       <ContactInfoSmallScreen>
-        <a href="mailto:hello@liverpoolpropertymaintenance.com">
-          📧 hello@liverpoolpropertymaintenance.com
+        <a href="mailto:hello@leeds-property-maintenance.co.uk">
+          📧 hello@leeds-property-maintenance.co.uk
         </a>
         <a href="tel:015138803613"
          onClick={handleCallClick}
-        >📞 0151 388 0361</a>
+        >📞 0333 360 6113</a>
       </ContactInfoSmallScreen>
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
@@ -203,10 +203,10 @@ export default function TopNavbar() {
           <UlWrapperRight className="flexNullCenter">
             <li className="semiBold font15 pointer">
               <a
-                href="mailto:hello@liverpoolpropertymaintenance.com"
+                href="mailto:hello@leeds-property-maintenance.co.uk"
                 style={{ padding: "10px 30px 10px 0" }}
               >
-                📧 hello@liverpoolpropertymaintenance.com
+                📧 hello@leeds-property-maintenance.co.uk
               </a>
               <br />
               <a href="tel:01513880361" 
@@ -215,7 +215,7 @@ export default function TopNavbar() {
              
 
               >
-                Call today 📞 0151 388 0361
+                Call today 📞 0333 360 6113
               </a>
             </li>
           </UlWrapperRight>

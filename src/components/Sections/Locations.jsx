@@ -3,7 +3,7 @@ import styled from "styled-components";
 import navRoutes from "../../config/navRoutes";
 
 export default function Locations() {
-  const baseUrl = "https://www.liverpoolpropertymaintenance.com/";
+  const baseUrl = "https://www.leeds-property-maintenance.co.uk/";
 
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();

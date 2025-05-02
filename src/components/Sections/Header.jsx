@@ -16,20 +16,20 @@ export default function Header() {
       <LeftSide className="flexCenter">
         <div>
         <HeadingTag>
-        Liverpool Property Maintenance -
-        Serving Liverpool & surrounding areas.
+        Leeds Property Maintenance -
+        Serving Leeds & surrounding areas.
           </HeadingTag>
           <LargeHeading>
-          <h2 className="extraBold font40">Liverpool Property Maintenance</h2>
+          <h2 className="extraBold font40">Leeds Property Maintenance</h2>
           
           <HeaderP className="font13 semiBold">
-          Fully insured and trusted by Liverpool landlords, agents, and homeowners. Free quotes with 0% finance available.
+          Fully insured and trusted by Leeds landlords, agents, and homeowners. Free quotes with 0% finance available.
 
           </HeaderP>
 </LargeHeading>
           <SmallHeading>
 
-              Fully insured and trusted by Liverpool landlords, agents, and homeowners. Free quotes with 0% finance available.
+              Fully insured and trusted by Leeds landlords, agents, and homeowners. Free quotes with 0% finance available.
           </SmallHeading>
           <BtnWrapper>
             <a href="#contactForm">
